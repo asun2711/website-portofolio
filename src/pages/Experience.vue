@@ -1,4 +1,5 @@
 <template>
+  <!-- Template TETAP SAMA PERSIS -->
   <section class="experience-section">
     <div class="container">
       <div class="section-header">
@@ -54,10 +55,12 @@ const { experiences } = useResumeData();
 
 <style scoped>
 .experience-section {
-  padding: 4rem 0;
+  padding: 4rem 1rem; /* Tambahkan padding horizontal */
   background: var(--bg-color);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box; /* Penting untuk mobile */
 }
 
 .experience-section::before {
@@ -73,9 +76,19 @@ const { experiences } = useResumeData();
     transparent);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  width: 100%;
+  padding: 0 1rem; /* Tambahkan padding */
+  box-sizing: border-box;
 }
 
 .about-title {
@@ -86,6 +99,8 @@ const { experiences } = useResumeData();
   color: var(--text);
   margin-bottom: 1rem;
   position: relative;
+  overflow-wrap: break-word; /* Handle long text */
+  word-break: break-word;
 }
 
 .title-line {
@@ -96,19 +111,13 @@ const { experiences } = useResumeData();
   top: 5px;
 }
 
-.section-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 .timeline {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
   padding-left: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .timeline-line {
@@ -133,6 +142,8 @@ const { experiences } = useResumeData();
   animation: fadeInUp 0.6s ease-out forwards;
   animation-delay: calc(var(--delay) * 0.2s);
   margin-left: -145px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .experience-card:last-child {
@@ -185,6 +196,8 @@ const { experiences } = useResumeData();
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card-content::before {
@@ -221,10 +234,13 @@ const { experiences } = useResumeData();
   font-weight: 600;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  white-space: nowrap; /* Mencegah text wrapping */
 }
 
 .card-header {
   margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .job-title {
@@ -233,6 +249,8 @@ const { experiences } = useResumeData();
   color: var(--text);
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .company-info {
@@ -240,22 +258,28 @@ const { experiences } = useResumeData();
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .company-name {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .separator {
   color: var(--text-secondary);
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .location {
   font-size: 1rem;
   color: var(--text-secondary);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .job-description {
@@ -264,10 +288,16 @@ const { experiences } = useResumeData();
   margin-bottom: 2rem;
   font-size: 1.05rem;
   padding-right: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .achievements {
   margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .achievements-title {
@@ -275,11 +305,15 @@ const { experiences } = useResumeData();
   font-weight: 600;
   color: var(--text);
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .achievements-list {
   list-style: none;
   padding-left: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .achievements-list li {
@@ -289,6 +323,8 @@ const { experiences } = useResumeData();
   margin-bottom: 0.75rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .bullet {
@@ -296,10 +332,13 @@ const { experiences } = useResumeData();
   font-size: 1.2rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
+  min-width: 1.2rem; /* Pastikan bullet tidak menyusut */
 }
 
 .achievement-text {
   flex: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .tech-tags {
@@ -308,6 +347,8 @@ const { experiences } = useResumeData();
   gap: 0.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--surface);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tech-tag {
@@ -319,6 +360,10 @@ const { experiences } = useResumeData();
   font-weight: 500;
   border: 1px solid rgba(99, 102, 241, 0.2);
   transition: all var(--transition-fast);
+  white-space: nowrap; /* Mencegah tag terpecah */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .tech-tag:hover {
@@ -337,6 +382,11 @@ const { experiences } = useResumeData();
   }
 }
 
+.about-title {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Dark mode styles */
 [data-theme="dark"] .card-content {
   background: var(--dark-card);
   border-color: var(--dark-surface);
@@ -355,41 +405,53 @@ const { experiences } = useResumeData();
     transparent 100%);
 }
 
-@media (max-width: 1024px) {
-  .timeline {
-    padding-left: 50px;
-  }
-  
-  .timeline-line {
-    left: 25px;
-  }
-  
-  .timeline-dot {
-    left: -50px;
-    width: 36px;
-    height: 36px;
+/* ==================== */
+/* RESPONSIVE FIXES */
+/* ==================== */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  .experience-section {
-    padding: 4rem 0;
-  }
-  
-  .section-header {
-    margin-bottom: 3rem;
-  }
-  
+@media (max-width: 1024px) {
   .timeline {
-    padding-left: 0;
+    padding-left: 40px; /* Kurangi padding */
   }
   
   .timeline-line {
-    display: none;
+    left: 20px; /* Sesuaikan posisi */
+    margin-left: -130px;
   }
   
   .timeline-dot {
-    display: none;
+    left: -45px;
+    width: 34px;
+    height: 34px;
+  }
+  
+  .experience-card {
+    margin-left: -125px; /* Sesuaikan margin */
+  }
+  
+  .job-description {
+    padding-right: 100px; /* Kurangi padding */
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    padding-left: 30px;
+  }
+  
+  .timeline-line {
+    left: 15px;
+    margin-left: -110px;
+  }
+  
+  .experience-card {
+    margin-left: -105px;
   }
   
   .card-content {
@@ -397,48 +459,174 @@ const { experiences } = useResumeData();
   }
   
   .date-badge {
-    position: relative;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    margin-bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
   }
   
   .job-description {
-    padding-right: 0;
+    padding-right: 80px;
+  }
+}
+
+/* TABLET (768px dan bawah) - FIX UTAMA */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 3rem 1rem; /* Kurangi padding vertikal */
+  }
+  
+  .section-header {
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .timeline {
+    padding-left: 0; /* HAPUS padding kiri */
+    margin: 0;
+  }
+  
+  .timeline-line {
+    display: none; /* Sembunyikan timeline di mobile */
+  }
+  
+  .timeline-dot {
+    display: none; /* Sembunyikan dot di mobile */
+  }
+  
+  .experience-card {
+    margin-left: 0 !important; /* HAPUS margin negatif */
+    margin-bottom: 2rem;
+    width: 100%;
+    animation-delay: calc(var(--delay) * 0.1s); /* Percepat animasi di mobile */
+  }
+  
+  .card-content {
+    padding: 1.75rem;
+    margin: 0;
+    width: 100%;
+    border-radius: var(--radius-md, 10px);
+  }
+  
+  .card-content::before {
+    display: none; /* Sembunyikan garis kiri di mobile */
+  }
+  
+  .date-badge {
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    width: auto;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.9rem;
+  }
+  
+  .job-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
   }
   
   .company-info {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+    margin-bottom: 0.5rem;
   }
   
   .separator {
-    display: none;
+    display: none; /* Sembunyikan separator di mobile */
+  }
+  
+  .company-name {
+    font-size: 1.05rem;
+  }
+  
+  .location {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+  
+  .job-description {
+    padding-right: 0 !important; /* HAPUS padding kanan */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievements {
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievements-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .achievements-list li {
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .bullet {
+    font-size: 1rem;
+    margin-top: 0.15rem;
+  }
+  
+  .achievement-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .tech-tags {
+    gap: 0.4rem;
+    padding-top: 1.25rem;
+  }
+  
+  .tech-tag {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Hapus hover effects di mobile untuk performa */
+  .experience-card:hover .card-content {
+    transform: none;
+  }
+  
+  .experience-card:hover .timeline-dot {
+    transform: none;
   }
 }
 
-.about-title {
-  animation: fadeInUp 0.8s ease-out;
-}
-
+/* MOBILE KECIL (480px dan bawah) */
 @media (max-width: 480px) {
   .experience-section {
-    padding: 3rem 0;
+    padding: 2.5rem 0.75rem;
+  }
+  
+  .about-title {
+    font-size: 1.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+  
+  .title-line {
+    width: 60px;
   }
   
   .card-content {
     padding: 1.5rem;
   }
   
-  .about-title {
-    font-size: 1.75rem;
-    letter-spacing: 2px;
-  }
-  
   .job-title {
     font-size: 1.3rem;
+    line-height: 1.4;
   }
   
   .company-name {
@@ -450,11 +638,103 @@ const { experiences } = useResumeData();
   }
   
   .job-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
   }
   
   .achievements-title {
     font-size: 1rem;
+  }
+  
+  .achievements-list li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .achievement-text {
+    font-size: 0.9rem;
+  }
+  
+  .tech-tags {
+    gap: 0.35rem;
+  }
+  
+  .tech-tag {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
+  }
+  
+  .date-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* MOBILE SANGAT KECIL (360px dan bawah) */
+@media (max-width: 360px) {
+  .experience-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .card-content {
+    padding: 1.25rem;
+  }
+  
+  .job-title {
+    font-size: 1.2rem;
+  }
+  
+  .job-description {
+    font-size: 0.9rem;
+  }
+  
+  .achievements-list li {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .bullet {
+    margin-top: 0;
+  }
+  
+  .tech-tags {
+    justify-content: center;
+  }
+  
+  .tech-tag {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Landscape mode untuk mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .experience-section {
+    padding: 2rem 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  .experience-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-content {
+    padding: 1.25rem;
   }
 }
 </style>

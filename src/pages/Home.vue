@@ -1184,10 +1184,18 @@ const getLimitedTech = (tech: string[]) => {
     display: none;
   }
   
-  .hero {
+   .hero {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+  }
+  
+  .hero-image {
+    order: 1; 
+  }
+  
+  .hero-content {
+    order: 2; 
   }
   
   .hero-buttons {

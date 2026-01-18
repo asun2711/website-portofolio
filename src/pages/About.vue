@@ -726,11 +726,14 @@ const trackDownload = () => {
 <style scoped>
 .about-page {
   position: relative; 
-  padding: 3rem 0;
+  padding: 2rem 1rem; 
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   background: var(--bg-color);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
 .about-page::before {
@@ -748,82 +751,89 @@ const trackDownload = () => {
   );
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
 .about-content {
   width: 100%;
-  margin-left: -30px;
+  margin: 0 auto; 
+  box-sizing: border-box;
 }
 
 .about-header {
   text-align: center;
-  margin-bottom: 4rem; 
+  margin-bottom: 3rem; 
+  padding: 0 0.5rem;
 }
 
 .about-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 300;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em; 
   text-transform: uppercase;
   color: var(--text);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   position: relative;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .title-line {
-  width: 80px;
+  width: 60px; 
   height: 2px;
   background: var(--primary);
   margin: 0 auto;
-  top: 5px;
 }
 
 .profile-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem; 
   align-items: center;
-}
-
-@media (max-width: 768px) {
-  .profile-section {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-  
-  .about-page {
-    padding: 4rem 0;
-  }
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .name {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem); 
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .bio {
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1rem; 
+  line-height: 1.6; 
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   text-align: justify;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-info {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   transition: transform var(--transition-fast);
 }
 
@@ -831,47 +841,44 @@ const trackDownload = () => {
   transform: translateX(4px);
 }
 
-@media (max-width: 768px) {
-  .contact-item {
-    justify-content: center;
-  }
-  
-  .contact-item:hover {
-    transform: none;
-  }
-}
-
 .contact-icon {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--primary);
-  min-width: 24px;
+  min-width: 20px; 
+  flex-shrink: 0;
 }
 
 .contact-text {
-  font-size: 1.1rem;
+  font-size: 1rem; 
   color: var(--text);
   font-weight: 400;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1;
 }
 
-/* Button/Link Styling */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.875rem 2rem;
+  justify-content: center;
+  gap: 0.5rem; 
+  padding: 0.75rem 1.5rem; 
   background: var(--primary);
   color: white;
   border: none;
   border-radius: var(--radius-md);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-base);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em; 
   text-decoration: none;
   text-align: center;
   border: 2px solid transparent;
+  width: 100%; 
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
 }
 
 .btn:hover {
@@ -887,18 +894,21 @@ const trackDownload = () => {
 
 .btn-text {
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-icon {
-  font-size: 1.1rem;
+  font-size: 1rem; 
   transition: transform var(--transition-base);
+  flex-shrink: 0;
 }
 
 .btn:hover .btn-icon {
   transform: translateY(2px);
 }
 
-/* Secondary button style */
 .btn-secondary {
   background: var(--secondary);
 }
@@ -907,53 +917,61 @@ const trackDownload = () => {
   background: var(--secondary-dark);
 }
 
-/* Resume note styling */
 .resume-note {
   margin-top: 0.5rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem; 
   opacity: 0.8;
+  text-align: center;
+  width: 100%;
 }
 
-/* Profile Image Styling - tetap sama */
 .profile-image {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; 
   align-items: center;
   position: relative;
-  padding-right: 2rem;
-  margin-top: -300px;
+  padding: 0; 
+  margin-top: 0; 
+  order: -1; 
 }
 
 .image-wrapper {
   position: relative;
-  margin-right: -1rem;
+  margin: 0 auto; 
+  width: 100%;
+  max-width: 300px; 
+  box-sizing: border-box;
 }
 
 .image-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; 
   border-radius: 50%;
   overflow: hidden;
-  border: 6px solid var(--card); 
+  border: 4px solid var(--card); 
   
-  /* UBAH BAYANGAN MENJADI UNGU */
   box-shadow: 
-    var(--shadow-2xl),
-    0 0 0 12px rgba(137, 89, 251, 0.87); 
+    var(--shadow-lg), 
+    0 0 0 8px rgba(137, 89, 251, 0.87); 
   
   transition: all var(--transition-base);
+  box-sizing: border-box;
 }
 
 .image-container:hover {
   transform: scale(1.05);
   box-shadow: 
-    var(--shadow-2xl),
-     0 0 0 12px rgba(103, 44, 240, 0.87); 
+    var(--shadow-xl),
+    0 0 0 8px rgba(103, 44, 240, 0.87);
 }
 
 .profile-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -965,13 +983,12 @@ const trackDownload = () => {
   transform: scale(1.1);
 }
 
-/* Glow effect */
 .profile-glow {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
+  top: -15px; 
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
   border-radius: 50%;
   background: linear-gradient(
     45deg, 
@@ -982,11 +999,11 @@ const trackDownload = () => {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s ease;
-  filter: blur(20px);
+  filter: blur(15px); 
 }
 
 .image-container:hover .profile-glow {
-  opacity: 0.4;
+  opacity: 0.3; 
   animation: rotate 4s linear infinite;
 }
 
@@ -999,90 +1016,17 @@ const trackDownload = () => {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .profile-section {
-    gap: 2rem;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .image-container {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .profile-image {
-    padding-right: 1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 768px) {
-  .profile-image {
-    justify-content: center;
-    padding-right: 0;
-    margin-top: 1rem;
-  }
-  
-  .image-wrapper {
-    margin-right: 0;
-  }
-  
-  .image-container {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .about-title {
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-  }
-  
-  .name {
-    font-size: 2rem;
-  }
-  
-  .bio {
-    font-size: 1rem;
-    text-align: left;
-  }
-  
-  .contact-text {
-    font-size: 1rem;
-  }
-  
-  .image-container {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .about-header {
-    margin-bottom: 3rem;
-  }
-}
-
-/* Fallback styling jika foto tidak ditemukan */
-.profile-photo {
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 4rem;
-}
-
-.profile-photo::after {
-  content: '👨‍💻';
-  display: none;
-}
-
-/* Animations */
 .about-title {
   animation: fadeInUp 0.8s ease-out;
 }
@@ -1095,15 +1039,280 @@ const trackDownload = () => {
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-/* Untuk layar yang sangat lebar */
-@media (min-width: 1400px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-page {
+    padding: 3rem 1.5rem;
+  }
+  
+  .profile-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
   .profile-image {
     justify-content: flex-end;
-    padding-right: 4rem;
+    padding-right: 1rem;
+    order: 2; /* Kembalikan order untuk tablet */
   }
   
   .image-wrapper {
-    margin-right: -2rem;
+    max-width: 280px;
+  }
+  
+  .image-container {
+    border-width: 5px;
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 200px;
+  }
+  
+  .about-content {
+    margin-left: 0;
+  }
+}
+
+/* Desktop (1024px dan atas) */
+@media (min-width: 1024px) {
+  .about-page {
+    padding: 4rem 2rem;
+  }
+  
+  .profile-section {
+    gap: 3rem;
+  }
+  
+  .profile-image {
+    justify-content: flex-end;
+    padding-right: 2rem;
+    order: 2;
+  }
+  
+  .image-wrapper {
+    max-width: 350px;
+    margin-right: -1rem;
+  }
+  
+  .image-container {
+    width: 350px;
+    height: 350px;
+    padding-bottom: 0;
+    border-width: 6px;
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 250px;
+  }
+  
+  .about-content {
+    margin-left: -30px;
+  }
+}
+
+/* Mobile (767px dan bawah) - PERBAIKAN UTAMA */
+@media (max-width: 767px) {
+  .about-page {
+    padding: 2rem 0.75rem; 
+    min-height: auto;
+    align-items: flex-start; 
+  }
+  
+  .about-header {
+    margin-bottom: 2rem;
+  }
+  
+  .about-title {
+    font-size: 1.75rem; 
+    letter-spacing: 0.1em;
+  }
+  
+  .profile-section {
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    text-align: center;
+  }
+  
+  .profile-info {
+    order: 2; 
+  }
+  
+  .profile-image {
+    order: 1; 
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .image-wrapper {
+    max-width: 250px; 
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 250px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    border-width: 4px;
+    box-shadow: 
+      var(--shadow-md),
+      0 0 0 6px rgba(137, 89, 251, 0.87); 
+  }
+  
+  .name {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  .bio {
+    font-size: 0.95rem;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+  }
+  
+  .contact-item {
+    justify-content: justify;
+  }
+  
+  .contact-item:hover {
+    transform: none; /* Hapus hover effect di mobile */
+  }
+  
+  .btn {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .btn:hover {
+    transform: none; /* Hapus transform hover di mobile */
+  }
+  
+  .resume-note {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile kecil (480px dan bawah) */
+@media (max-width: 480px) {
+  .about-page {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .image-wrapper {
+    max-width: 220px;
+  }
+  
+  .image-container {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
+  .bio {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  
+  .contact-text {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .btn-text {
+    white-space: normal;
+    line-height: 1.3;
+  }
+}
+
+/* Mobile sangat kecil (360px dan bawah) */
+@media (max-width: 360px) {
+  .image-wrapper {
+    max-width: 200px;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-title {
+    font-size: 1.3rem;
+  }
+  
+  .name {
+    font-size: 1.3rem;
+  }
+  
+  .btn-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape mode untuk mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .about-page {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .profile-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .profile-image {
+    order: 2;
+  }
+  
+  .image-wrapper {
+    max-width: 200px;
+  }
+  
+  .bio {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Untuk layar yang sangat lebar */
+@media (min-width: 1400px) {
+  .profile-image {
+    padding-right: 3rem;
+  }
+  
+  .image-wrapper {
+    max-width: 400px;
+  }
+  
+  .image-container {
+    width: 400px;
+    height: 400px;
   }
 }
 </style>
