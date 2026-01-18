@@ -60,7 +60,7 @@
               <div class="image-container">
                 <!-- Foto dari assets -->
                 <img 
-                  src="@/assets/foto.jpg" 
+                  src="@/assets/Foto.jpg" 
                   :alt="name + ' - Web Developer'"
                   class="profile-photo"/>
                 <!-- Glow effect background -->
@@ -549,7 +549,7 @@ const printResume = () => {
         <div class="resume-container">
           <!-- Foto bulat di pojok kiri atas - DIPERBESAR -->
           <div class="profile-photo-corner">
-            <img src="${window.location.origin}/src/assets/foto.jpg" 
+            <img src="${window.location.origin}/src/assets/Foto.jpg" 
                  class="profile-photo-img"
                  alt="${name}"
                  onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'width:100%;height:100%;background:linear-gradient(135deg,#3498db,#2c3e50);display:flex;align-items:center;justify-content:center;color:white;font-size:24px;font-weight:bold;\\'>${name.split(' ').map(n => n.charAt(0)).join('')}</div>';">

@@ -22,7 +22,7 @@
       <div class="hero-image">
         <div class="avatar-container">
           <img 
-            src="@/assets/foto.jpg" 
+            src="@/assets/Foto.jpg" 
             :alt="`${resumeData.name} - ${resumeData.title}`"
             class="avatar-image"
           />
