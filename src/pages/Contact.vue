@@ -327,7 +327,7 @@ loadSavedForm();
 .contact-page {
   position: relative; /* WAJIB */
   padding: 2rem;
-  margin-left: -200px;
+  margin-left: -170px;
 }
 
 .contact-page::before {
