@@ -548,7 +548,7 @@ const printResume = () => {
       <body>
         <div class="resume-container">
           <!-- Foto bulat di pojok kiri atas - DIPERBESAR -->
-          <div class="profile-photo-corner">
+           <div class="profile-photo-corner">
             <img src="${window.location.origin}/src/assets/Foto.jpg" 
                  class="profile-photo-img"
                  alt="${name}"
