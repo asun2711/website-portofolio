@@ -1,79 +1,77 @@
 <template>
-  <div class="home-page">
-    <section class="about-page">
-      <div class="container">
-        <div class="about-content">
+  <section class="about-page">
+    <div class="container">
+      <div class="about-content">
 
-          <div class="about-header">
-            <h1 class="about-title">TENTANG SAYA</h1>
-            <div class="title-line"></div>
-          </div>
+        <div class="about-header">
+          <h1 class="about-title">TENTANG SAYA</h1>
+          <div class="title-line"></div>
+        </div>
 
-          <div class="profile-section">
-            <div class="profile-info">
-              <h2 class="name">{{ name }}</h2>
-              <p class="bio">
-                {{ bio }}
-              </p>
+        <div class="profile-section">
+          <div class="profile-info">
+            <h2 class="name">{{ name }}</h2>
+            <p class="bio">
+              {{ bio }}
+            </p>
 
-              <div class="contact-info">
-                <div class="contact-item">
-                  <span class="contact-icon">📍</span>
-                  <span class="contact-text">{{ contact.location }}</span>
-                </div>
-                <div class="contact-item">
-                  <span class="contact-icon">✉️</span>
-                  <span class="contact-text">{{ contact.email }}</span>
-                </div>
-                <div class="contact-item">
-                  <span class="contact-icon">📱</span>
-                  <span class="contact-text">{{ contact.phone }}</span>
-                </div>
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span class="contact-text">{{ contact.location }}</span>
               </div>
-
-              <!-- Button untuk generate resume -->
-              <button 
-                class="btn btn-primary"
-                @click="printResume">
-                <span class="btn-text">DOWNLOAD RESUME (CV)</span>
-                <span class="btn-icon">📄</span>
-              </button>
-              
-              <!-- Fallback link jika masih ingin file statis -->
-              <a 
-                v-if="staticResumeExists"
-                :href="resumeUrl" 
-                download="Asun_Fadrianto_Resume.pdf"
-                class="btn btn-secondary"
-                @click="trackDownload"
-                style="margin-top: 10px;">
-                <span class="btn-text">DOWNLOAD PDF STATIS</span>
-                <span class="btn-icon">⬇️</span>
-              </a>
-              
-              <p class="resume-note">
-                <small>Resume akan di-generate dari data portfolio Anda</small>
-              </p>
+              <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <span class="contact-text">{{ contact.email }}</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span class="contact-text">{{ contact.phone }}</span>
+              </div>
             </div>
 
-            <div class="profile-image">
-              <div class="image-wrapper">
-                <div class="image-container">
-                  <!-- Foto dari assets -->
-                  <img 
-                    src="@/assets/Foto.jpg" 
-                    :alt="name + ' - Web Developer'"
-                    class="profile-photo"/>
-                  <!-- Glow effect background -->
-                  <div class="profile-glow"></div>
-                </div>
+            <!-- Button untuk generate resume -->
+            <button 
+              class="btn btn-primary"
+              @click="printResume">
+              <span class="btn-text">DOWNLOAD RESUME (CV)</span>
+              <span class="btn-icon">📄</span>
+            </button>
+            
+            <!-- Fallback link jika masih ingin file statis -->
+            <a 
+              v-if="staticResumeExists"
+              :href="resumeUrl" 
+              download="Asun_Fadrianto_Resume.pdf"
+              class="btn btn-secondary"
+              @click="trackDownload"
+              style="margin-top: 10px;">
+              <span class="btn-text">DOWNLOAD PDF STATIS</span>
+              <span class="btn-icon">⬇️</span>
+            </a>
+            
+            <p class="resume-note">
+              <small>Resume akan di-generate dari data portfolio Anda</small>
+            </p>
+          </div>
+
+          <div class="profile-image">
+            <div class="image-wrapper">
+              <div class="image-container">
+                <!-- Foto dari assets -->
+                <img 
+                  src="@/assets/Foto.jpg" 
+                  :alt="name + ' - Web Developer'"
+                  class="profile-photo"/>
+                <!-- Glow effect background -->
+                <div class="profile-glow"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -736,14 +734,6 @@ const trackDownload = () => {
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden; 
-}
-
-.home-page {
-  position: relative; 
-  padding: 0rem 7rem;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
 }
 
 .about-page::before {

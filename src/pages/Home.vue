@@ -276,7 +276,7 @@ const getLimitedTech = (tech: string[]) => {
 
 .home-page {
   position: relative; 
-  padding: 7rem;
+  padding: 2rem;
   animation: fadeInUp 0.8s ease-out 0.2s both;
   background-color: var(--bg-primary);
   color: var(--text-primary);
