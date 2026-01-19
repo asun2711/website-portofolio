@@ -145,15 +145,15 @@ export const resumeData: ResumeData = reactive({
   skills: [
     {
       category: "Frontend Development",
-      items: ["Vue.js", "PHP", "HTML & CSS", "React", "TypeScript", "JavaScript"]
+      items: ["Vue.js", "PHP", "HTML & CSS","TypeScript"]
     },
     {
       category: "Backend Development",
-      items: ["Node.js", "Next.js", "Express", "REST API"]
+      items: ["Node.js", "Next.js", "Javascript", "REST API"]
     },
     {
       category: "Tools & Others",
-      items: ["Git", "Docker", "Figma", "VS Code"]
+      items: ["Git", "Figma", "VS Code"]
     },
     {
       category: "Network",
