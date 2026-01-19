@@ -81,7 +81,9 @@ export const resumeData: ResumeData = reactive({
         'Memastikan jalannya Sistem Manajemen Rumah Sakit (SIMRS)',
         'Memonitoring Sistem Manajemen Rumah Sakit (SIMRS)',
         'Melakukan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS)',
-        'Monitoring Pemeliharaan Database Sistem Manajemen Rumah Sakit (SIMRS)'
+        'Monitoring Pemeliharaan Database Sistem Manajemen Rumah Sakit (SIMRS)',
+        'Instalasi & Konfigurasi Jaringan LAN',
+        'Hardware & Software Maintanace',
       ],
       tech: ['PHP', 'Node.js', 'HTML & CSS', 'PostgreSQL', 'REST API']
     },
@@ -107,6 +109,8 @@ export const resumeData: ResumeData = reactive({
       description: 'Bertanggung jawab dalam pengembangan dan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS).',
       achievements: [
         'Assistant IT Support',
+        'Instalasi & Konfigurasi Jaringan LAN',
+        'Hardware & Software Maintanace',
         'Pemahaman yang mendalam tentang sistem digital.',
         'Pengembangan Web.',
         'Melakukan implementasi kepada pengguna/user.'
