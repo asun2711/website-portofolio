@@ -314,7 +314,7 @@ const printResume = () => {
           
           .resume-header h1 {
             color: #2c3e50;
-            font-size: 32px; /* DIPERBESAR */
+            font-size: 20px; /* DIPERBESAR */
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -514,10 +514,10 @@ const printResume = () => {
             }
             
             .profile-photo-corner {
-              top: 2mm;
-              left: 2mm;
-              width: 170px; /* Tetap besar saat print */
-              height: 170px;
+              top: 1mm;
+              left: 1mm;
+              width: 150px; /* Tetap besar saat print */
+              height: 150px;
               border-width: 3px;
             }
             

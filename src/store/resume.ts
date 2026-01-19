@@ -78,10 +78,8 @@ export const resumeData: ResumeData = reactive({
       location: 'Penukal Abab Lematang Ilir, Sumatra Selatan, Indonesia',
       description: 'Bertanggung jawab dalam pengembangan dan pemeliharaan aplikasi web internal perusahaan.',
       achievements: [
-        'Memastikan jalannya Sistem Manajemen Rumah Sakit (SIMRS)',
-        'Memonitoring Sistem Manajemen Rumah Sakit (SIMRS)',
-        'Melakukan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS)',
-        'Monitoring Pemeliharaan Database Sistem Manajemen Rumah Sakit (SIMRS)',
+        'Memastikan jalannya Sistem serta melakukan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS)',
+        'Memonitoring Sistem dan Pemeliharaan Database Sistem Manajemen Rumah Sakit (SIMRS)',
         'Instalasi & Konfigurasi Jaringan LAN',
         'Hardware & Software Maintanace',
       ],
@@ -111,9 +109,7 @@ export const resumeData: ResumeData = reactive({
         'Assistant IT Support',
         'Instalasi & Konfigurasi Jaringan LAN',
         'Hardware & Software Maintanace',
-        'Pemahaman yang mendalam tentang sistem digital.',
         'Pengembangan Web.',
-        'Melakukan implementasi kepada pengguna/user.'
       ],
       tech: ['Vue.js', 'PHP', 'Nest.js', 'Node.js', 'HTML & CSS', 'PostgreSQL', 'REST API']
     },
