@@ -549,11 +549,11 @@ const printResume = () => {
         <div class="resume-container">
           <!-- Foto bulat di pojok kiri atas - DIPERBESAR -->
            <div class="profile-photo-corner">
-            <img src="${window.location.origin}/src/assets/Foto.jpg" 
+            <img src="/Foto.jpg"
                  class="profile-photo-img"
                  alt="${name}"
                  onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'width:100%;height:100%;background:linear-gradient(135deg,#3498db,#2c3e50);display:flex;align-items:center;justify-content:center;color:white;font-size:24px;font-weight:bold;\\'>${name.split(' ').map(n => n.charAt(0)).join('')}</div>';">
-          </div>
+              </div>
           
           <!-- Header - VERSI BARU: Lebih kompak -->
           <div class="resume-header">
