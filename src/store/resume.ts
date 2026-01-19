@@ -154,7 +154,15 @@ export const resumeData: ResumeData = reactive({
     {
       category: "Tools & Others",
       items: ["Git", "Docker", "Figma", "Navicat", "XAMPP", "VS Code"]
-    }
+    },
+    {
+      category: "Networking",
+      items: ["Winbox","Networking Dasar"]
+    },
+     {
+      category: "Hardware & Software ",
+      items: ["Instalation OS dan Software Pendukung lainnya"]
+    },
   ],
   
   // Data projects dengan gambar yang diimport

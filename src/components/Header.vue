@@ -4,12 +4,10 @@
       <div class="logo">
         <router-link to="/" class="logo-link">
           <div class="logo-container">
-            <!-- Logo dari file SunWeb.png -->
             <img 
               src="@/assets/SunWeb.png" 
               alt="SunWeb Logo"
               class="logo-image"/>
-            <!-- Text -->
             <div class="logo-text">
               <span class="logo-main">SunWeb</span>
               <span class="logo-sub">Portfolio</span>
@@ -18,12 +16,10 @@
         </router-link>
       </div>
       
-      <!-- Mobile Menu Toggle -->
       <button class="mobile-menu-toggle" @click="toggleMobileMenu" :aria-expanded="isMobileMenuOpen">
         <span class="hamburger-icon">{{ isMobileMenuOpen ? '✕' : '☰' }}</span>
       </button>
       
-      <!-- Nav Menu -->
       <nav class="nav" :class="{ 'nav-open': isMobileMenuOpen }">
         <div class="nav-content">
           <router-link to="/" class="nav-link" exact @click="closeMobileMenu">Home</router-link>
@@ -35,7 +31,6 @@
         </div>
       </nav>
       
-      <!-- Overlay untuk mobile menu -->
       <div class="nav-overlay" :class="{ 'overlay-visible': isMobileMenuOpen }" @click="closeMobileMenu"></div>
       
       <button class="theme-toggle" @click="toggleTheme" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
@@ -58,7 +53,6 @@ export default {
   },
   
   mounted() {
-    // Cek preferensi tema dari localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       this.isDark = true;
@@ -66,7 +60,6 @@ export default {
       document.documentElement.setAttribute('data-theme', 'dark');
     }
     
-    // Cek prefers-color-scheme jika tidak ada setting di localStorage
     if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       this.isDark = true;
       this.themeIcon = '☀️';
@@ -85,7 +78,6 @@ export default {
     
     toggleMobileMenu() {
       this.isMobileMenuOpen = !this.isMobileMenuOpen;
-      // Lock/unlock body scroll
       if (this.isMobileMenuOpen) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -102,9 +94,6 @@ export default {
 </script>
 
 <style scoped>
-/* ==================== */
-/* CSS VARIABLES */
-/* ==================== */
 :root {
   --header-bg: #ffffff;
   --header-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -136,9 +125,6 @@ export default {
   --overlay-bg: rgba(0, 0, 0, 0.7);
 }
 
-/* ==================== */
-/* BASE STYLES */
-/* ==================== */
 .header {
   background: var(--header-bg);
   box-shadow: var(--header-shadow);
@@ -160,9 +146,6 @@ export default {
   position: relative;
 }
 
-/* ==================== */
-/* LOGO STYLES */
-/* ==================== */
 .logo-link {
   text-decoration: none;
   display: inline-block;
@@ -213,9 +196,6 @@ export default {
   letter-spacing: 0.5px;
 }
 
-/* ==================== */
-/* NAVIGATION STYLES - DESKTOP */
-/* ==================== */
 .nav {
   display: flex;
   gap: 2rem;
@@ -262,9 +242,6 @@ export default {
   border-radius: 1px;
 }
 
-/* ==================== */
-/* THEME TOGGLE */
-/* ==================== */
 .theme-toggle {
   background: none;
   border: none;
@@ -293,9 +270,6 @@ export default {
   outline-offset: 2px;
 }
 
-/* ==================== */
-/* MOBILE MENU TOGGLE */
-/* ==================== */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -322,9 +296,6 @@ export default {
   outline-offset: 2px;
 }
 
-/* ==================== */
-/* MOBILE MENU OVERLAY */
-/* ==================== */
 .nav-overlay {
   display: none;
   position: fixed;
@@ -345,11 +316,6 @@ export default {
   pointer-events: auto;
 }
 
-/* ==================== */
-/* RESPONSIVE STYLES */
-/* ==================== */
-
-/* Tablet (768px - 1023px) */
 @media (max-width: 1023px) {
   .container {
     padding: 0.75rem 1rem;
@@ -369,27 +335,24 @@ export default {
   }
 }
 
-/* Mobile (767px dan bawah) */
 @media (max-width: 767px) {
   .container {
     padding: 0.75rem;
   }
   
-  /* Mobile menu toggle */
   .mobile-menu-toggle {
     display: flex;
     order: 2;
     margin-left: auto;
   }
   
-  /* Hide desktop nav */
   .nav {
     position: fixed;
     top: 0;
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: #ffffff; /* Warna solid untuk light mode */
+    background: #ffffff; 
     box-shadow: var(--mobile-menu-shadow);
     flex-direction: column;
     justify-content: flex-start;
@@ -401,25 +364,22 @@ export default {
     margin: 0;
   }
   
-  /* Tambahkan untuk dark mode */
   [data-theme="dark"] .nav {
-    background: #1a1a1a; /* Warna solid untuk dark mode */
+    background: #1a1a1a; 
   }
   
-  /* Atau dengan opacity penuh */
   .nav {
-    background: rgba(255, 255, 255, 1) !important; /* opacity 1 = tidak transparan */
+    background: rgba(255, 255, 255, 1) !important; 
   }
   
   [data-theme="dark"] .nav {
-    background: rgba(26, 26, 26, 1) !important; /* opacity 1 = tidak transparan */
+    background: rgba(26, 26, 26, 1) !important; 
   }
   
   .nav-open {
     right: 0;
   }
   
-  /* Nav content mobile */
   .nav-content {
     flex-direction: column;
     gap: 0;
@@ -435,11 +395,9 @@ export default {
     text-align: left;
     display: block;
     box-sizing: border-box;
-    /* Pastikan link juga tidak transparan */
-    background: transparent; /* Atau beri warna solid jika perlu */
+    background: transparent; 
   }
   
-  /* Untuk active state */
   .nav-link.router-link-exact-active {
     font-weight: 600;
     background: rgba(59, 130, 246, 0.1);
@@ -458,14 +416,12 @@ export default {
     display: none;
   }
   
-  /* Theme toggle mobile positioning */
   .theme-toggle {
     position: static;
     order: 3;
     margin-left: 0.5rem;
   }
   
-  /* Logo mobile */
   .logo-image {
     width: 40px;
     height: 40px;
@@ -484,7 +440,6 @@ export default {
   }
 }
 
-/* Small Mobile (480px dan bawah) */
 @media (max-width: 480px) {
   .container {
     padding: 0.5rem;
@@ -516,7 +471,6 @@ export default {
   }
 }
 
-/* Extra Small Mobile (360px dan bawah) */
 @media (max-width: 360px) {
   .logo-main {
     font-size: 1rem;
@@ -537,7 +491,6 @@ export default {
   }
 }
 
-/* Landscape Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .nav {
     padding-top: 4rem;
@@ -549,9 +502,6 @@ export default {
   }
 }
 
-/* ==================== */
-/* ANIMATIONS */
-/* ==================== */
 @keyframes logoFloat {
   0%, 100% {
     transform: translateY(0);
@@ -565,9 +515,6 @@ export default {
   animation: logoFloat 1.5s ease-in-out infinite;
 }
 
-/* ==================== */
-/* ACCESSIBILITY */
-/* ==================== */
 @media (prefers-reduced-motion: reduce) {
   .logo-container:hover .logo-image {
     animation: none;
@@ -581,7 +528,6 @@ export default {
   }
 }
 
-/* Focus styles untuk accessibility */
 .nav-link:focus-visible,
 .theme-toggle:focus-visible,
 .mobile-menu-toggle:focus-visible {
@@ -590,7 +536,6 @@ export default {
   border-radius: 4px;
 }
 
-/* Print styles */
 @media print {
   .header {
     position: static;
