@@ -161,7 +161,7 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Database administrator",
-      items: [ "MySQL", "PostgreSQL","Navicat",]
+      items: [ "MySQL", "PostgreSQL","Navicat"]
     },
     {
       category: "Hardware & Software ",
