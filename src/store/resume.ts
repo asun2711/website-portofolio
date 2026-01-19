@@ -149,19 +149,23 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Backend Development",
-      items: ["Node.js", "Next.js", "Express", "MySQL", "PostgreSQL", "REST API"]
+      items: ["Node.js", "Next.js", "Express", "REST API"]
     },
     {
       category: "Tools & Others",
-      items: ["Git", "Docker", "Figma", "Navicat", "XAMPP", "VS Code"]
+      items: ["Git", "Docker", "Figma", "VS Code"]
     },
     {
-      category: "Networking",
-      items: ["Winbox","Networking Dasar"]
+      category: "Network",
+      items: ["Winbox","Network"]
     },
-     {
+    {
+      category: "Database administrator",
+      items: [ "MySQL", "PostgreSQL","Navicat",]
+    },
+    {
       category: "Hardware & Software ",
-      items: ["Instalation OS dan Software Pendukung lainnya"]
+      items: ["Instalation OS ","Instalation Software Pendukung","Problem solving"]
     },
   ],
   
