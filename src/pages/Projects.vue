@@ -1,9 +1,9 @@
 <template>
   <div class="projects-page">
-    <section class="hero-section">
+    <div class="about-header">
       <h1 class="about-title">My Projects</h1>
       <div class="title-line"></div>
-    </section>
+    </div>
 
     <!-- Filter kategori -->
     <div class="filters">
@@ -86,7 +86,7 @@ const setFilter = (category: string) => {
 <style scoped>
 .projects-page {
   position: relative;
-  padding: 2rem;
+  padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -106,9 +106,10 @@ const setFilter = (category: string) => {
   );
 }
 
-.hero-section {
+.about-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; 
+  padding: 0 0.5rem;
 }
 
 .about-title {
