@@ -639,7 +639,7 @@ const printResume = () => {
           
           <!-- Footer -->
           <div class="resume-footer">
-            <p>Generated from Portfolio • ${formattedDate}</p>
+            <p>Generated from SunWeb Portfolio • ${formattedDate}</p>
             <p>${contact.email} • ${contact.phone}</p>
           </div>
         </div>
