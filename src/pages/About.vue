@@ -641,6 +641,10 @@ const printResume = () => {
           <div class="resume-footer">
             <p>Generated from SunWeb Portfolio • ${formattedDate}</p>
             <p>${contact.email} • ${contact.phone}</p>
+            <a href="https://website-portofolio-dwa8.vercel.app">
+              Clik Me untuk mengunjungi Portfolio Saya <br>
+              https://website-portofolio-dwa8.vercel.app
+            </a>
           </div>
         </div>
         
