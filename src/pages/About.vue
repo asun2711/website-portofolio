@@ -606,6 +606,21 @@ const printResume = () => {
               </div>
             `).join('')}
           </div>
+
+           <!-- Skills -->
+          <div class="section">
+            <h3 class="section-title">Skills</h3>
+            <div class="skills-container">
+              ${skills.map(skill => `
+                <div class="skill-category">
+                  <h4>${skill.category}</h4>
+                  <div class="skill-items">
+                    ${skill.items.map(item => `• ${item}<br>`).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
           
           <!-- Education -->
           <div class="section">
@@ -620,21 +635,6 @@ const printResume = () => {
                 ${edu.description ? `<p>${edu.description}</p>` : ''}
               </div>
             `).join('')}
-          </div>
-          
-          <!-- Skills -->
-          <div class="section">
-            <h3 class="section-title">Skills</h3>
-            <div class="skills-container">
-              ${skills.map(skill => `
-                <div class="skill-category">
-                  <h4>${skill.category}</h4>
-                  <div class="skill-items">
-                    ${skill.items.map(item => `• ${item}<br>`).join('')}
-                  </div>
-                </div>
-              `).join('')}
-            </div>
           </div>
           
           <!-- Footer -->

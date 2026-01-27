@@ -165,7 +165,7 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Hardware & Software ",
-      items: ["Instalation OS ","Instalation Software Pendukung","Problem solving"]
+      items: ["Rakit Hardware ","Instalation OS ","Instalation Software","Problem solving"]
     },
   ],
   
