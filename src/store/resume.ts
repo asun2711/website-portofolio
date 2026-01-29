@@ -46,6 +46,25 @@ export interface Project {
   year?: string;
 }
 
+// Tambah interface untuk Paket Harga Website
+export interface WebsitePackage {
+  id: number;
+  name: string;
+  subtitle: string;
+  isPopular: boolean;
+  discount: string;
+  originalPrice: string;
+  monthlyPrice: string;
+  bonusMonths: string;
+  promoTag: string;
+  selectButtonText: string;
+  priceNote: string;
+  features: string[];
+  bonuses: string[];
+  isFeatured?: boolean;
+  discountPercentage?: number;
+}
+
 export interface ResumeData {
   name: string;
   title: string;
@@ -55,6 +74,7 @@ export interface ResumeData {
   education: Education[];
   skills: Skill[];
   projects: Project[];
+  websitePackages: WebsitePackage[];
 }
 
 // Data utama yang akan digunakan di semua komponen
@@ -149,7 +169,7 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Backend Development",
-      items: ["Node.js", "Next.js", "Javascript", "REST API"]
+      items: ["Node.js", "Next.js", "Javascript"]
     },
     {
       category: "Tools & Others",
@@ -165,7 +185,7 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Hardware & Software ",
-      items: ["Rakit Hardware ","Instalation OS ","Instalation Software","Problem solving"]
+      items: ["Rakit Hardware ","Instalation OS ","Instalation Software","Problem Solving","Pemeliharaan & Dukungan"]
     },
   ],
   
@@ -191,6 +211,92 @@ export const resumeData: ResumeData = reactive({
       category: "Web Development",
       year: "2024"
     },
+  ],
+
+  // Data Website Packages
+  websitePackages: [
+    {
+      id: 1,
+      name: "Basic",
+      subtitle: "Solusi paling pas untuk kamu yang butuh layanan standar dengan harga terjangkau.",
+      isPopular: true,
+      discount: "DISKON 25%",
+      originalPrice: "Rp 1.200.000",
+      monthlyPrice: "Rp 900.000",
+      bonusMonths: "Domain gratis 1 tahun",
+      promoTag: "Promo terbatas",
+      selectButtonText: "Pilih paket",
+      priceNote: "Yuk gercep mumpung promo 25% dengan harga 900rb (harga normal Rp 1.200.000).",
+      features: [
+        "Web Dinamis",
+        "Max 4 Halaman",
+        "Desain responsif (Mobile Friendly)",
+        "Setting domain dan web hosting",
+        "Integrasi Sosial Media (link tombol)",
+      ],
+      bonuses: [
+        "Revisi 2x",
+        "Bantuan prioritas 24/1",
+        "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
+        "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 500rb",
+      ],
+      discountPercentage: 80
+    },
+    {
+      id: 2,
+      name: "Premium",
+      subtitle: "Fitur paling lengkap, hasil maksimal, dan dukungan prioritas untuk performa terbaik.",
+      isPopular: false,
+      isFeatured: true,
+      discount: "DISKON 25%",
+      originalPrice: "Rp 2.000.000",
+      monthlyPrice: "Rp 1.500.000",
+      bonusMonths: "Domain gratis 1 tahun",
+      promoTag: "Promo terbatas",
+      selectButtonText: "Pilih paket",
+      priceNote: "Yuk gercep mumpung promo 25% dengan harga 1,5Jt (harga normal Rp 2.000.000).",
+      features: [
+          "Web Dinamis",
+          "Max 6 Halaman",
+          "Desain responsif (Mobile Friendly)",
+          "Setting domain dan web hosting",
+          "Integrasi Sosial Media (link tombol)",
+        ],
+        bonuses: [
+          "Revisi 4x",
+          "Bantuan prioritas 24/3",
+          "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
+          "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 1jt",
+        ],
+      discountPercentage: 70
+    },
+    {
+      id: 3,
+      name: "Business",
+      subtitle: "Dirancang khusus untuk operasional bisnis dengan fitur lengkap dan dukungan.",
+      isPopular: false,
+      discount: "Mulai Dari",
+      originalPrice: "-",
+      monthlyPrice: "Rp 5.000.000",
+      bonusMonths: "Domain gratis 1 tahun",
+      promoTag: "Promo terbatas",
+      selectButtonText: "Pilih paket",
+      priceNote: " Yuk gercep, Mulai dengan 5jt pilihan tepat untuk usaha yang butuh layanan serius dan stabil.",
+      features: [
+        "Web Dinamis",
+        "Max 10 Halaman (Note: Harga final menyesuaikan jumlah Halaman dan kompleksitas fitur)",
+        "Desain responsif (Mobile Friendly)",
+        "Setting domain dan web hosting",
+        "Integrasi Sosial Media (link tombol)",
+      ],
+      bonuses: [
+        "Revisi 6x",
+        "Bantuan prioritas 24/7",
+        "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
+        "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 1.5jt - 3jt",
+      ],
+      discountPercentage: 67
+    }
   ]
 });
 
