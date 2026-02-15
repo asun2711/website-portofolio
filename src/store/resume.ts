@@ -237,8 +237,6 @@ export const resumeData: ResumeData = reactive({
       bonuses: [
         "Revisi 2x",
         "Bantuan prioritas 24/1",
-        "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
-        "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 500rb",
       ],
       discountPercentage: 80
     },
@@ -265,8 +263,6 @@ export const resumeData: ResumeData = reactive({
         bonuses: [
           "Revisi 4x",
           "Bantuan prioritas 24/3",
-          "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
-          "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 1jt",
         ],
       discountPercentage: 70
     },
@@ -292,8 +288,6 @@ export const resumeData: ResumeData = reactive({
       bonuses: [
         "Revisi 6x",
         "Bantuan prioritas 24/7",
-        "VPS gratis selama 1 bulan (Pada tahun berikutnya dikenakan 500rb",
-        "Domain gratis selama 1 tahun (Pada tahun berikutnya dikenakan 1.5jt - 3jt",
       ],
       discountPercentage: 67
     }
