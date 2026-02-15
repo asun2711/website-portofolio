@@ -197,7 +197,7 @@ export const resumeData: ResumeData = reactive({
       description: "Website Profile Pelayanan dan dashboard admin. Frontend menggunakan Vue.js dan Backend menggunakan Next.js",
       image: rsudImage,
       technologies: ["Vue.js", "TypeScript", "Next.js", "PostgreSQL", "Vite"],
-      link: "#",
+      link: "https://rsudtalangubi.id/",
       category: "Web Development",
       year: "2025"
     },
@@ -207,7 +207,7 @@ export const resumeData: ResumeData = reactive({
       description: "Website portofolio ini dirancang dengan fokus pada pengalaman pengguna (user experience) dan aksesibilitas, sehingga mudah digunakan dan dapat diakses oleh semua pengguna.",
       image: portfolioImage,
       technologies: ["Vue.js", "TypeScript", "Next.js", "PostgreSQL", "Vite"],
-      link: "#",
+      link: "https://website-portofolio-dwa8.vercel.app/",
       category: "Web Development",
       year: "2024"
     },
