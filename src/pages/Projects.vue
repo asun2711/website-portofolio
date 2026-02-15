@@ -56,7 +56,7 @@
     </div>
 
     <!-- Paket Harga Website - Menggunakan data dari store -->
-    <!-- <div class="packages-section">
+    <div class="packages-section">
       <h2 class="packages-title">Website Packages</h2>
       <div class="title-line"></div>
       
@@ -83,10 +83,10 @@
             </div>
             <div class="bonus">{{ pkg.bonusMonths }}</div>
             <div class="promo-tag">{{ pkg.promoTag }}</div>
-          </div> -->
+          </div>
           
           <!-- TOMBOL WHATSAPP -->
-          <!-- <button 
+          <button 
             class="package-btn" 
             :class="{ primary: pkg.isFeatured }"
             @click="contactViaWhatsApp(pkg)">
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
