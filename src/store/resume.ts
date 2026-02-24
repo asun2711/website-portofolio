@@ -80,8 +80,8 @@ export interface ResumeData {
 // Data utama yang akan digunakan di semua komponen
 export const resumeData: ResumeData = reactive({
   name: "Asun Fadrianto",
-  title: "Staff IT & Web Developer",
-  bio: "Saya adalah Staff IT dan pengembang perangkat lunak dengan pengalaman lebih dari 2 tahun dalam pemeliharaan dan pengembangan aplikasi web. Saya senang membangun solusi yang skalabel menggunakan teknologi modern, dengan perhatian besar pada kualitas kode, pemeliharaan sistem, dan pengalaman pengguna. Mampu beradaptasi dan bekerjasama baik secara induvidu ataupun secara tim dengan baik serta dapat mengatur dan mengorganisir waktu semaksimal mungkin, memiliki ketekunan, sangat menjunjung tinggi nilai-nilai norma.",
+  title: "Staff IT",
+  bio: "Perkenalkan, Saya Asun Fadrianto Seorang Staff IT dengan pengalaman lebih dari 2 tahun dalam menjadi IT Support Troubleshooting hardware software computer dan pengembangan aplikasi web. Pengalaman dalam memberikan dukungan teknis kepada pengguna serta mengembangkan aplikasi web yang fungsional dan user-friendly. Mampu beradaptasi dan bekerjasama baik secara induvidu ataupun secara tim dengan baik serta dapat mengatur dan mengorganisir waktu semaksimal mungkin, memiliki ketekunan, sangat menjunjung tinggi nilai-nilai norma. ",
   
   contact: {
     email: "asunfadrianto2799@gmail.com",
@@ -99,7 +99,7 @@ export const resumeData: ResumeData = reactive({
       description: 'Bertanggung jawab dalam pengembangan dan pemeliharaan aplikasi web internal perusahaan.',
       achievements: [
         'Memastikan jalannya Sistem serta melakukan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS)',
-        'Memonitoring Sistem dan Pemeliharaan Database Sistem Manajemen Rumah Sakit (SIMRS)',
+        'Memonitoring Sistem Manajemen Rumah Sakit (SIMRS)',
         'Instalasi & Konfigurasi Jaringan LAN',
         'Hardware & Software Maintanace',
       ],
@@ -124,7 +124,7 @@ export const resumeData: ResumeData = reactive({
       title: 'IT Intern',
       company: 'PT.PUPUK SRIWIDJAJA',
       location: 'Jalan Mayor Zen, Sei Selayur, Kalidoni, Kota Palembang, Sumatra Selatan, Indonesia',
-      description: 'Bertanggung jawab dalam pengembangan dan penyesuaian Sistem Manajemen Rumah Sakit (SIMRS).',
+      description: 'Assistant IT Support',
       achievements: [
         'Assistant IT Support',
         'Instalasi & Konfigurasi Jaringan LAN',
@@ -140,11 +140,11 @@ export const resumeData: ResumeData = reactive({
       degree: "Sarjana Teknik Teknologi Informasi",
       institution: "Universitas Muhammadiyah Palembang",
       year: "2018 - 2022",
-      description: "Fokus pada pengembangan web, database, dan jaringan komputer",
+      description: "Fokus pada pengembangan web, Troubleshooting hardware & software Instalasi dan konfigurasi sistem operasi",
       gpa: "3.55",
       details: [
         "IPK: 3.55",
-        "Fokus pada pengembangan web dan mobile applications",
+        "Fokus pada pengembangan web",
         "Mata kuliah utama: Struktur Data, Algoritma, Basis Data, Jaringan Komputer",
         "Proyek akhir: Perancangan UI/UX Sistem berbasis web"
       ]
@@ -181,11 +181,11 @@ export const resumeData: ResumeData = reactive({
     },
     {
       category: "Database administrator",
-      items: [ "MySQL", "PostgreSQL","Navicat"]
+      items: [ "MySQL", "PostgreSQL"]
     },
     {
       category: "Hardware & Software ",
-      items: ["Rakit Hardware ","Instalation OS ","Instalation Software","Problem Solving","Pemeliharaan & Dukungan"]
+      items: ["Rakit Hardware ","Instalation OS ","Instalation Software","Problem Solving","Pemeliharaan & Dukungan komputer"]
     },
   ],
   
