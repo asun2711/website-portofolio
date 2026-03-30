@@ -103,7 +103,7 @@ export const resumeData: ResumeData = reactive({
         'Instalasi & Konfigurasi Jaringan LAN',
         'Hardware & Software Maintanace',
       ],
-      // tech: ['PHP', 'Node.js', 'HTML & CSS', 'PostgreSQL', 'REST API']
+      tech: []
     },
     {
       date: '2022 - 2024',
@@ -117,7 +117,7 @@ export const resumeData: ResumeData = reactive({
         'Melakukan pengolahan data entry sistem kedalam server.',
         'Melakukan implementasi kepada pengguna/user tentang bagaimana tatacara dan alur penggunaan Sistem Manajemen Rumah Sakit (SIMRS) sesuai dengan modul masing-masing.'
       ],
-      // tech: ['PHP', 'Node.js', 'HTML & CSS', 'PostgreSQL', 'REST API']
+      tech: []
     },
     {
       date: '2020 - 2021',
@@ -131,7 +131,7 @@ export const resumeData: ResumeData = reactive({
         'Hardware & Software Maintanace',
         'Pengembangan Web.',
       ],
-      // tech: ['Vue.js', 'PHP', 'Nest.js', 'Node.js', 'HTML & CSS', 'PostgreSQL', 'REST API']
+      tech: []
     },
   ],
   
